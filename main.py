@@ -171,10 +171,10 @@ class Crack:
                 time.sleep(4)
                 self.clear()
                 self.check()
-            pins = [pin[0:pin.index(",")] for pin in requests.get("https://raw.githubusercontent.com/dxv3/Roblox-pin-brute-force/main/Common-Credentialsfour-digit-pin-codes-sorted-by-frequency-withcount.csv?token=GHSAT0AAAAAACPVFL5I6WQ466ZK2CGLZQ6QZRPS65Q").text.splitlines()][startingLine:9998]
+            pins = [pin[0:pin.index(",")] for pin in requests.get("https://raw.githubusercontent.com/dxv3/Roblox-pin-brute-force/main/Common-Credentialsfour-digit-pin-codes-sorted-by-frequency-withcount.csv").text.splitlines()][startingLine:9998]
         else:
             startingLine = 0
-            pins = [pin[0:pin.index(",")] for pin in requests.get("https://raw.githubusercontent.com/dxv3/Roblox-pin-brute-force/main/Common-Credentialsfour-digit-pin-codes-sorted-by-frequency-withcount.csv?token=GHSAT0AAAAAACPVFL5I6WQ466ZK2CGLZQ6QZRPS65Q").text.splitlines()]
+            pins = [pin[0:pin.index(",")] for pin in requests.get("https://raw.githubusercontent.com/dxv3/Roblox-pin-brute-force/main/Common-Credentialsfour-digit-pin-codes-sorted-by-frequency-withcount.csv").text.splitlines()]
 
         for line, pin in enumerate(pins):
             uiprint(f"Trying {pin}...")
